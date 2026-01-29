@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BuildTec México - Construimos obras... Mejoramos vidas</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <!-- Contact bar (fixed) -->
+    <div class="contact-bar" id="contactBar" role="region" aria-label="Barra de contacto">
+        <div class="contact-bar-inner">
+            <div class="contact-info">
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Twitter">
+                        <i class="fab fa-twitter"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="LinkedIn">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="#" class="social-icon" title="Instagram">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/525512345678" class="social-icon whatsapp-icon" title="WhatsApp"
+                        target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-actions-right">
+                <a class="contact-cta email" href="mailto:contacto@builtecmexico.com.mx" title="Email">
+                    <i class="fa fa-envelope"></i>
+                    <span>contacto@builtecmexico.com.mx</span>
+                </a>
+                <button class="contact-action-phone" id="callBtnRight" aria-label="Llamar">
+                    <i class="fa fa-phone"></i>
+                    <span>+52 442 171 9625</span>
+                </button>
+                <button class="contact-close" id="closeContact" aria-label="Cerrar barra de contacto">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Contact bar toggle tab (hidden by default) -->
+    <div class="contact-tab" id="contactTab" role="button" tabindex="0" aria-label="Abrir barra de contacto">
+        <i class="fa fa-phone"></i>
+        <span>Contacto</span>
+    </div>
+    <!-- Navegación -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <i class="fas fa-industry"></i>
+                    <span>BuildTec México</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Proyectos</a></li>
+                    <li><a href="#productos">Servicios destacados</a></li>
+                    <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-diamond">
+            <button class="diamond-arrow diamond-arrow-left" id="prevImage" aria-label="Imagen anterior">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            <button class="diamond-arrow diamond-arrow-right" id="nextImage" aria-label="Siguiente imagen">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+        <div class="hero-content">
+            <h1>Construimos obras... Mejoramos vidas</h1>
+            <p class="hero-subtitle">Calidad, compromiso, creatividad y responsabilidad en cada proyecto</p>
+            <button class="btn btn-primary">Conocer Más</button>
+        </div>
+        <div class="hero-overlay"></div>
+    </section>
+
+    <!-- Servicios -->
+    <section id="servicios" class="services">
+        <div class="container">
+            <h2 class="section-title">Proyectos Realizados</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-road"></i>
+                    </div>
+                    <h3>Modernización de Terracerías</h3>
+                    <p>Ampliación de terracerías, pavimentación, obras de drenaje y señalización vial.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Sistema de control y disposición de agua pluvial</h3>
+                    <p>Excavaciones a cielo abierto, movimiento de grandes volumenes de material, estabilización de
+                        arcilla, concretos lanzados, pisos de concreto, obra de toma,obra de desfogue, obra de control.
+                    </p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-bezier-curve"></i>
+                    </div>
+                    <h3>Vialidades y plataformas</h3>
+                    <p>Cortes de terreno, estabilización de suelo, rellenos, terraplanes y plataformas, linea de
+                        alcantarillado, descargas domiciliarias,linea de agua potable, vialidad en nivel base, banquetas
+                        y guarniciones.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-building"></i>
+                    </div>
+                    <h3>Construcción de edificio comercial y de servicios</h3>
+                    <p>Construcción de edificio de 3 pisos.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-faucet"></i>
+                    </div>
+                    <h3>Red de agua potable</h3>
+                    <p>Red de agua potable, alcantarillado, base y sub-base, guarniciones y banquetas.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3>Limpieza de colector sanitario</h3>
+                    <p>Limpieza total de colectores sanitarios.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Productos -->
+    <section id="productos" class="products">
+        <div class="container">
+            <h2 class="section-title">Servicios Destacados</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-tractor"></i>
+                    </div>
+                    <h3>Renta de maquinaria</h3>
+                    <p>Maquinaria profesional.</p>
+                    <span class="price">Consultar</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-wrench"></i>
+                    </div>
+                    <h3>Renta de equipo y herramienta</h3>
+                    <p>Equipo y herramientas profesionales.</p>
+                    <span class="price">Consultar</span>
+                </div>
+                <div class="product-card">
+                    <div class="product-image">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Renta de pipas y transporte de agua</h3>
+                    <p>Pipas y equipo necesario para el transporte de agua.</p>
+                    <span class="price">Consultar</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sobre Nosotros -->
+    <section id="nosotros" class="about">
+        <div class="container">
+            <h2 class="section-title">Sobre BuildTec México</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Nosotros</h3>
+                    <p>BUILDTEC MEXICO S.A. DE C.V. es una empresa cuyo objetivo principal
+                        radica en contribuir con el desarrollo de la región y su entorno, realizando siempre un trabajo
+                        que retribuya un beneficio social extra y
+                        permita que las obras y/o proyectos se lleven acabo en armonia con el
+                        ambiente.</p>
+                    <p>Contamos con un equipo de profesionales altamente capacitados, equipos modernos y un compromiso
+                        inquebrantable con la excelencia.</p>
+                    <ul class="about-list">
+                        <li><i class="fas fa-check"></i> Muchos proyectos completados</li>
+                        <li><i class="fas fa-check"></i> Equipo de profesionales altamente capacitados</li>
+                        <li><i class="fas fa-check"></i> El mejor equipo </li>
+                        <li><i class="fas fa-check"></i> Garantía integral en todos los servicios</li>
+                    </ul>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h4>10+</h4>
+                        <p>Proyectos Realizados</p>
+                    </div>
+                    <div class="stat">
+                        <h4>10+</h4>
+                        <p>Años de Experiencia</p>
+                    </div>
+                    <div class="stat">
+                        <h4>0+</h4>
+                        <p>Empresas Asociadas</p>
+                    </div>
+                    <div class="stat">
+                        <h4>98%</h4>
+                        <p>Satisfacción Cliente</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="contact">
+        <div class="container">
+            <h2 class="section-title">Contactanos</h2>
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <div>
+                            <h4>Ubicación</h4>
+                            <p> Calzada de las Artes #70 С
+                                Col. San Francisquito, C.P. 76058<br>QUERETARO, QRO, México</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <div>
+                            <h4>Teléfono</h4>
+                            <p>+1 (52) 442 171 9625<br></p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <div>
+                            <h4>Email</h4>
+                            <p>contacto@builtecmexico.com.mx<br>tecpromicvas3@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <input type="text" placeholder="Tu Nombre" required>
+                    <input type="email" placeholder="Tu Email" required>
+                    <input type="text" placeholder="Asunto" required>
+                    <textarea placeholder="Mensaje" rows="5" required></textarea>
+                    <button type="submit" class="btn btn-primary">Enviar Mensaje</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>BuildTec México SA.De C.V.</h4>
+                    <p>Construimos obras... Mejoramos vidas.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="#productos">Productos</a></li>
+                        <li><a href="#nosotros">Sobre Nosotros</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Redes Sociales</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 BuildTec México SA.De C.V. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
