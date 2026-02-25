@@ -736,6 +736,87 @@ body.has-top-contact {
     .about-stats {
         grid-template-columns: 1fr;
     }
+    /* Mejoras adicionales para móviles */
+    .container {
+        padding: 0 8px;
+    }
+    .service-card, .product-card, .stat {
+        padding: 1rem;
+    }
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    .footer-section h4 {
+        font-size: 1.1rem;
+    }
+    .footer-section p, .footer-section a {
+        font-size: 0.95rem;
+    }
+    .contact-bar-inner {
+        flex-direction: column;
+        gap: 4px;
+        padding: 6px 8px;
+    }
+    .contact-cta.email span {
+        font-size: 11px;
+    }
+    .hero {
+        padding-left: 2%;
+        height: auto;
+        min-height: 60vh;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hero-diamond {
+        width: 90vw;
+        height: 220px;
+        min-width: 0;
+        min-height: 0;
+        right: 0;
+        top: 0;
+        border-width: 2px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.35), 0 0 40px 10px rgba(245,158,11,0.35);
+        filter: drop-shadow(0 20px 40px rgba(0,0,0,0.3));
+    }
+    .diamond-arrow {
+        width: 36px;
+        height: 36px;
+        font-size: 1.1rem;
+    }
+    .hero-content {
+        max-width: 95vw;
+        padding: 0.5rem;
+    }
+    .product-image {
+        height: 120px;
+        font-size: 2rem;
+    }
+    .btn {
+        padding: 8px 18px;
+        font-size: 0.95rem;
+    }
+    section {
+        padding: 40px 0;
+    }
+    .about-list li {
+        font-size: 0.95rem;
+    }
+    .stat h4 {
+        font-size: 1.3rem;
+    }
+    .contact-item i {
+        font-size: 1.2rem;
+        min-width: 32px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.95rem;
+        padding: 8px 10px;
+    }
+    .footer-bottom {
+        font-size: 0.85rem;
+    }
 }
 
 @media (max-width: 480px) {
@@ -749,5 +830,46 @@ body.has-top-contact {
 
     .stat h4 {
         font-size: 2rem;
+    }
+    /* Ajustes extra para pantallas muy pequeñas */
+    .container {
+        padding: 0 4px;
+    }
+    .footer-content {
+        gap: 0.5rem;
+    }
+    .footer-section h4 {
+        font-size: 1rem;
+    }
+    .footer-section p, .footer-section a {
+        font-size: 0.85rem;
+    }
+    .contact-bar-inner {
+        padding: 4px 4px;
+    }
+    .btn {
+        padding: 6px 12px;
+        font-size: 0.85rem;
+    }
+    section {
+        padding: 24px 0;
+    }
+    .about-list li {
+        font-size: 0.85rem;
+    }
+    .stat h4 {
+        font-size: 1rem;
+    }
+    .contact-item i {
+        font-size: 1rem;
+        min-width: 24px;
+    }
+    .contact-form input,
+    .contact-form textarea {
+        font-size: 0.85rem;
+        padding: 6px 6px;
+    }
+    .footer-bottom {
+        font-size: 0.75rem;
     }
 }
