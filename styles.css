@@ -505,7 +505,7 @@ section {
     color: var(--white);
     font-weight: 600;
 }
-.contact-bar .contact-action i { color: var(--primary-color); font-size: 18px }
+.contact-bar .contact-action i { color: var(--primary-color); font-size: 16px }
 .contact-bar .contact-text { display:block; font-size:13px; color: var(--white) }
 .contact-bar .contact-number { display:block; font-size:12px; color:#cbd5e1 }
 .social-icons { display:flex; align-items:center; gap:12px }
