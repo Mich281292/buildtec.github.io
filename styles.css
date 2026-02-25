@@ -742,9 +742,9 @@ body.has-top-contact {
     }
     /* Contact bar más compacta en móviles */
     .contact-bar-inner {
-        min-height: 36px;
-        padding: 2px 4px !important;
-        font-size: 0.92rem;
+        min-height: 26px;
+        padding: 0 2px !important;
+        font-size: 0.85rem;
     }
     .contact-cta, .contact-cta.email, .contact-action-phone {
         padding: 4px 8px;
@@ -902,9 +902,9 @@ body.has-top-contact {
     }
     /* Contact bar aún más compacta */
     .contact-bar-inner {
-        min-height: 28px;
-        padding: 1px 2px !important;
-        font-size: 0.82rem;
+        min-height: 18px;
+        padding: 0 1px !important;
+        font-size: 0.75rem;
     }
     .contact-cta, .contact-cta.email, .contact-action-phone {
         padding: 2px 5px;
