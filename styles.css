@@ -683,6 +683,10 @@ body.has-top-contact {
 
 /* Responsive */
 @media (max-width: 768px) {
+        .contact-cta i,
+        .contact-action-phone i {
+            font-size: 13px !important;
+        }
     .hamburger {
         display: flex;
     }
@@ -881,6 +885,10 @@ body.has-top-contact {
 }
 
 @media (max-width: 480px) {
+        .contact-cta i,
+        .contact-action-phone i {
+            font-size: 11px !important;
+        }
     .hero-content h1 {
         font-size: 1.5rem;
     }
