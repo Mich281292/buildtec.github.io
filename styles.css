@@ -736,6 +736,67 @@ body.has-top-contact {
     .about-stats {
         grid-template-columns: 1fr;
     }
+    /* Contact bar más compacta en móviles */
+    .contact-bar-inner {
+        min-height: 36px;
+        padding: 2px 4px !important;
+        font-size: 0.92rem;
+    }
+    .contact-cta, .contact-cta.email, .contact-action-phone {
+        padding: 4px 8px;
+        font-size: 0.92rem;
+        min-height: 28px;
+    }
+    .social-icon {
+        width: 26px;
+        height: 26px;
+        font-size: 13px;
+    }
+    .contact-bar .contact-text, .contact-bar .contact-number {
+        font-size: 0.85rem;
+    }
+    .contact-close {
+        padding: 2px 4px;
+    }
+    /* Hero más bajo y contenido ajustado */
+    .hero {
+        min-height: 38vh;
+        height: auto;
+        padding-top: 60px;
+        padding-bottom: 18px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .hero-diamond {
+        height: 120px;
+        width: 90vw;
+        min-width: 0;
+        min-height: 0;
+        margin-bottom: 10px;
+        right: 0;
+        top: 0;
+        border-width: 1.5px;
+        box-shadow: 0 10px 20px rgba(0,0,0,0.18), 0 0 20px 5px rgba(245,158,11,0.18);
+        filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+    }
+    .hero-content {
+        max-width: 98vw;
+        padding: 0.2rem 0.5rem 0.5rem 0.5rem;
+        margin: 0;
+        text-align: left;
+    }
+    .hero-content h1 {
+        font-size: 1.25rem;
+        margin-bottom: 0.5rem;
+    }
+    .hero-content p.hero-subtitle {
+        font-size: 0.98rem;
+        margin-bottom: 1rem;
+    }
+    .btn.btn-primary {
+        padding: 7px 14px;
+        font-size: 0.92rem;
+    }
     /* Mejoras adicionales para móviles */
     .container {
         padding: 0 8px;
@@ -830,6 +891,54 @@ body.has-top-contact {
 
     .stat h4 {
         font-size: 2rem;
+    }
+    /* Contact bar aún más compacta */
+    .contact-bar-inner {
+        min-height: 28px;
+        padding: 1px 2px !important;
+        font-size: 0.82rem;
+    }
+    .contact-cta, .contact-cta.email, .contact-action-phone {
+        padding: 2px 5px;
+        font-size: 0.82rem;
+        min-height: 22px;
+    }
+    .social-icon {
+        width: 20px;
+        height: 20px;
+        font-size: 10px;
+    }
+    .contact-bar .contact-text, .contact-bar .contact-number {
+        font-size: 0.75rem;
+    }
+    .contact-close {
+        padding: 1px 2px;
+    }
+    /* Hero aún más bajo y compacto */
+    .hero {
+        min-height: 24vh;
+        padding-top: 36px;
+        padding-bottom: 8px;
+    }
+    .hero-diamond {
+        height: 70px;
+        width: 96vw;
+        margin-bottom: 6px;
+    }
+    .hero-content {
+        padding: 0.1rem 0.2rem 0.3rem 0.2rem;
+    }
+    .hero-content h1 {
+        font-size: 1rem;
+        margin-bottom: 0.3rem;
+    }
+    .hero-content p.hero-subtitle {
+        font-size: 0.82rem;
+        margin-bottom: 0.7rem;
+    }
+    .btn.btn-primary {
+        padding: 5px 10px;
+        font-size: 0.8rem;
     }
     /* Ajustes extra para pantallas muy pequeñas */
     .container {
