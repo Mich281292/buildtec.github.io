@@ -33,9 +33,40 @@ html {
 }
 
 @media (min-width: 900px) {
+            .nav-wrapper {
+                position: relative;
+            }
+            .hamburger {
+                display: none !important;
+                position: static;
+                right: auto;
+                top: auto;
+                transform: none;
+                z-index: auto;
+            }
+        .logo {
+            position: static;
+            margin-left: 0;
+            padding-left: 0;
+            background: transparent;
+            display: flex;
+            align-items: center;
+            pointer-events: auto;
+            z-index: auto;
+        }
         .logo-img {
-            height: 100px;
-            max-width: 320px;
+            height: 520px;
+            max-width: 1600px;
+            box-shadow: 0 12px 32px 0 rgba(0,0,0,0.18), 0 0 0 8px rgba(245,158,11,0.10);
+            position: static;
+            z-index: auto;
+            pointer-events: auto;
+            margin-right: 2.5rem;
+        }
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 2.5rem;
         }
     .navbar .container {
         display: flex;
