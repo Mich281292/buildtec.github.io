@@ -16,19 +16,19 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
 // Diamond Image Rotation
 const heroDiamond = document.querySelector('.hero-diamond');
 const images = [
-    'icarsa1.jpeg',
-    'icarsa2.jpeg',
-    'icarsa3.jpeg',
-    'icarsa4.jpeg',
-    'icarsa5.jpeg',
-    'icarsa6.jpeg',
-    'icarsa7.jpeg',
-    'icarsa8.jpeg',
-    'icarsa9.jpeg',
-    'icarsa10.jpeg',
-    'icarsa11.jpeg',
-    'icarsa12.jpeg',
-    'icarsa13.jpeg'
+    'icarsa1.png',
+    'icarsa2.png',
+    'icarsa3.png',
+    'icarsa4.png',
+    'icarsa5.png',
+    'icarsa6.png',
+    'icarsa7.png',
+    'icarsa8.png',
+    'icarsa9.png',
+    'icarsa10.png',
+    'icarsa11.png',
+    'icarsa12.png',
+    'icarsa13.png'
 ];
 
 let currentImageIndex = 0;
@@ -45,17 +45,28 @@ function preloadImages() {
 window.addEventListener('load', preloadImages);
 
 function rotateHeroDiamondImage() {
-    // Add fade-out animation
-    heroDiamond.classList.add('fade-transition');
-    
-    // Change image during fade
+    // Crear una imagen temporal para el fade
+    const tempImg = document.createElement('div');
+    tempImg.style.backgroundImage = `url('${images[(currentImageIndex + 1) % images.length]}')`;
+    tempImg.style.backgroundSize = 'cover';
+    tempImg.style.backgroundPosition = 'center';
+    tempImg.style.position = 'absolute';
+    tempImg.style.top = '0';
+    tempImg.style.left = '0';
+    tempImg.style.width = '100%';
+    tempImg.style.height = '100%';
+    tempImg.style.opacity = '0';
+    tempImg.style.transition = 'opacity 0.8s ease';
+    tempImg.style.zIndex = '10';
+    heroDiamond.appendChild(tempImg);
     setTimeout(() => {
-        currentImageIndex = (currentImageIndex + 1) % images.length;
-        heroDiamond.style.backgroundImage = `url('${images[currentImageIndex]}')`;
-        
-        // Remove animation class for next iteration
-        heroDiamond.classList.remove('fade-transition');
-    }, 50); // Reduced animation duration for imperceptible transition
+        tempImg.style.opacity = '1';
+        setTimeout(() => {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            heroDiamond.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+            heroDiamond.removeChild(tempImg);
+        }, 800);
+    }, 10);
 }
 
 // Auto-rotate interval reference
@@ -72,15 +83,28 @@ const prevBtn = document.getElementById('prevImage');
 const nextBtn = document.getElementById('nextImage');
 
 prevBtn.addEventListener('click', () => {
-    currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
-    heroDiamond.classList.add('fade-transition');
-    
+    const nextIndex = (currentImageIndex - 1 + images.length) % images.length;
+    const tempImg = document.createElement('div');
+    tempImg.style.backgroundImage = `url('${images[nextIndex]}')`;
+    tempImg.style.backgroundSize = 'cover';
+    tempImg.style.backgroundPosition = 'center';
+    tempImg.style.position = 'absolute';
+    tempImg.style.top = '0';
+    tempImg.style.left = '0';
+    tempImg.style.width = '100%';
+    tempImg.style.height = '100%';
+    tempImg.style.opacity = '0';
+    tempImg.style.transition = 'opacity 0.8s ease';
+    tempImg.style.zIndex = '10';
+    heroDiamond.appendChild(tempImg);
     setTimeout(() => {
-        heroDiamond.style.backgroundImage = `url('${images[currentImageIndex]}')`;
-        heroDiamond.classList.remove('fade-transition');
-    }, 50);
-    
-    // Restart the 6-second counter
+        tempImg.style.opacity = '1';
+        setTimeout(() => {
+            currentImageIndex = nextIndex;
+            heroDiamond.style.backgroundImage = `url('${images[currentImageIndex]}')`;
+            heroDiamond.removeChild(tempImg);
+        }, 800);
+    }, 10);
     restartAutoRotate();
 });
 
