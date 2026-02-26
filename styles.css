@@ -670,15 +670,16 @@ body.has-top-contact {
 
 @keyframes crossFade {
     from {
-        opacity: 0.98;
+        opacity: 0;
     }
     to {
         opacity: 1;
     }
 }
 
-.fade-transition {
-    animation: crossFade 0.05s ease-in-out !important;
+ .fade-transition {
+    animation: crossFade 0.8s ease-in-out !important;
+}
 }
 
 /* Responsive */
