@@ -3,20 +3,19 @@
         display: flex;
         align-items: center;
         justify-content: space-between;
-        width: 100%;
+        flex-direction: row;
     }
     .logo {
         order: 1;
         margin-left: 0;
-        padding-left: 0;
-        display: flex;
-        align-items: center;
+    }
+    .nav-menu {
+        display: none;
     }
     .hamburger {
-        order: 2;
         display: flex !important;
+        order: 2;
         margin-right: 0;
-        margin-left: auto;
         position: static;
         right: 0;
         top: 0;
