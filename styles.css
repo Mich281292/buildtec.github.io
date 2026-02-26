@@ -791,6 +791,9 @@ body.has-top-contact {
         border-width: 1.5px;
         box-shadow: 0 10px 20px rgba(0,0,0,0.18), 0 0 20px 5px rgba(245,158,11,0.18);
         filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+        clip-path: none !important;
+        border-radius: 12px;
+        background-clip: border-box;
     }
     .hero-content h1 {
         font-size: 1.25rem;
@@ -941,6 +944,9 @@ body.has-top-contact {
         width: 96vw;
         margin-top: 12px;
         margin-bottom: 0;
+        clip-path: none !important;
+        border-radius: 10px;
+        background-clip: border-box;
     }
     .hero-content h1 {
         font-size: 1rem;
