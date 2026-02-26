@@ -764,7 +764,7 @@ body.has-top-contact {
     }
     /* Hero más bajo y contenido ajustado */
     .hero {
-        min-height: 60vh;
+        min-height: 85vh;
         height: auto;
         padding-top: 60px;
         padding-bottom: 18px;
@@ -927,7 +927,7 @@ body.has-top-contact {
     }
     /* Hero aún más bajo y compacto */
     .hero {
-        min-height: 40vh;
+        min-height: 65vh;
         padding-top: 36px;
         padding-bottom: 8px;
     }
