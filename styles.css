@@ -1,3 +1,29 @@
+@media (max-width: 899px) {
+    .nav-wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .logo {
+        order: 1;
+        margin-left: 0;
+        padding-left: 0;
+        display: flex;
+        align-items: center;
+    }
+    .hamburger {
+        order: 2;
+        display: flex !important;
+        margin-right: 0;
+        margin-left: auto;
+        position: static;
+        right: 0;
+        top: 0;
+        transform: none;
+        z-index: auto;
+    }
+}
 * {
     margin: 0;
     padding: 0;
