@@ -33,15 +33,21 @@ html {
 }
 
 @media (min-width: 900px) {
+        .logo-img {
+            height: 100px;
+            max-width: 320px;
+        }
     .navbar .container {
         display: flex;
         align-items: center;
+        height: 100%;
         padding-left: 0;
     }
     .nav-wrapper {
         display: flex;
         align-items: center;
         width: 100%;
+        height: 100%;
     }
     .logo {
         margin-left: 0;
@@ -49,9 +55,17 @@ html {
         min-width: 0;
         display: flex;
         align-items: center;
-        justify-content: flex-start;
+        height: 100%;
     }
-}
+    .logo-img {
+        display: block;
+        align-self: center;
+    }
+    .navbar {
+        min-height: 80px;
+        display: flex;
+        align-items: center;
+    }
 }
 
 /* Navegación */
@@ -75,7 +89,7 @@ html {
 }
 
 .logo-img {
-    height: 70px;
+    height: 48px;
     width: auto;
     filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.5));
     image-rendering: auto;
