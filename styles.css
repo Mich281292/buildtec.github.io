@@ -680,7 +680,6 @@ body.has-top-contact {
  .fade-transition {
     animation: crossFade 0.8s ease-in-out !important;
 }
-}
 
 /* Responsive */
 @media (max-width: 768px) {
