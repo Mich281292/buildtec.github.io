@@ -103,7 +103,7 @@ html {
     position: absolute;
     width: 1100px;
     height: 1100px;
-    background: url('icarsa1.jpeg') center/cover no-repeat;
+    background: url('icarsa1.png') center/cover no-repeat;
     background-attachment: fixed;
     background-size: cover;
     -webkit-background-size: cover;
