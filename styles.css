@@ -770,7 +770,6 @@ body.has-top-contact {
         padding-bottom: 18px;
         flex-direction: column;
         align-items: flex-start;
-        position: relative;
     }
     .hero-content {
         order: 1;
@@ -781,22 +780,19 @@ body.has-top-contact {
     }
     .hero-diamond {
         order: 2;
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
+        position: static;
         height: 120px;
         width: 90vw;
         min-width: 0;
         min-height: 0;
-        margin: 0;
+        margin-top: 18px;
+        margin-bottom: 0;
         border-width: 1.5px;
         box-shadow: 0 10px 20px rgba(0,0,0,0.18), 0 0 20px 5px rgba(245,158,11,0.18);
         filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
         clip-path: none !important;
         border-radius: 12px;
         background-clip: border-box;
-        z-index: 2;
     }
     .hero-content h1 {
         font-size: 1.25rem;
@@ -943,17 +939,14 @@ body.has-top-contact {
     }
     .hero-diamond {
         order: 2;
-        position: absolute;
-        left: 50%;
-        bottom: 0;
-        transform: translateX(-50%);
+        position: static;
         height: 90px;
         width: 96vw;
-        margin: 0;
+        margin-top: 12px;
+        margin-bottom: 0;
         clip-path: none !important;
         border-radius: 10px;
         background-clip: border-box;
-        z-index: 2;
     }
     .hero-content h1 {
         font-size: 1rem;
