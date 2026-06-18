@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detalle de Servicio - BuildTec México</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body class="has-top-contact">
+    <div class="contact-bar" id="contactBar" role="region" aria-label="Barra de contacto">
+        <div class="contact-bar-inner">
+            <div class="contact-info">
+                <div class="social-icons">
+                    <a href="#" class="social-icon" title="Facebook">
+                        <i class="fab fa-facebook"></i>
+                    </a>
+                    <a href="https://wa.me/525512345678" class="social-icon whatsapp-icon" title="WhatsApp" target="_blank" rel="noopener noreferrer">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                </div>
+            </div>
+            <div class="contact-actions-right">
+                <a class="contact-cta email" href="mailto:contacto@builtecmexico.com.mx" title="Email">
+                    <i class="fa fa-envelope"></i>
+                    <span>contacto@builtecmexico.com.mx</span>
+                </a>
+                <button class="contact-action-phone" id="callBtnRight" aria-label="Llamar">
+                    <i class="fa fa-phone"></i>
+                    <span>+52 442 171 9625</span>
+                </button>
+                <button class="contact-close" id="closeContact" aria-label="Cerrar barra de contacto">
+                    <i class="fa fa-times"></i>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <div class="contact-tab" id="contactTab" role="button" tabindex="0" aria-label="Abrir barra de contacto">
+        <i class="fa fa-phone"></i>
+        <span>Contacto</span>
+    </div>
+
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <img src="logo2.png" alt="BuildTec México" class="logo-img" />
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#servicios">Proyectos</a></li>
+                    <li><a href="index.html#productos">Servicios destacados</a></li>
+                    <li><a href="index.html#nosotros">Sobre Nosotros</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                </ul>
+                <div class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <main>
+        <section class="service-detail-page" id="serviceDetailContent">
+            <div class="container">
+                <div class="service-detail-card">
+                    <div class="service-detail-header">
+                        <h1 id="detailTitle">Servicio</h1>
+                        <p id="detailDescription">Descripción del servicio.</p>
+                        <a id="backToServices" class="btn btn-secondary" href="index.html#servicios">Volver a Servicios</a>
+                    </div>
+                    <div class="service-carousel">
+                        <img id="carouselImage" src="icarsa1.png" alt="Imagen del servicio">
+                        <div class="carousel-controls">
+                            <button type="button" class="carousel-button" id="carouselPrev" aria-label="Anterior">‹</button>
+                            <button type="button" class="carousel-button" id="carouselNext" aria-label="Siguiente">›</button>
+                        </div>
+                    </div>
+                    <div class="carousel-thumbnails" id="carouselThumbnails"></div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

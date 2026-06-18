@@ -1,10 +1,7 @@
 // Mobile Menu Toggle
-hamburger.addEventListener('click', () => {
-
 const hamburger = document.getElementById('hamburger');
 const navMenu = document.getElementById('navMenu');
 
-// Mantener el icono visible y permitir cerrar el menú al presionar de nuevo
 hamburger.addEventListener('click', () => {
     navMenu.classList.toggle('active');
 });
@@ -15,6 +12,138 @@ document.querySelectorAll('.nav-menu a').forEach(link => {
         navMenu.classList.remove('active');
     });
 });
+
+const serviceDetails = [
+    {
+        id: 0,
+        title: 'Modernización de Terracerías',
+        description: 'Ampliación de terracerías, pavimentación, obras de drenaje y señalización vial.',
+        images: ['icarsa1.png', 'icarsa2.png', 'icarsa3.png']
+    },
+    {
+        id: 1,
+        title: 'Sistema de control y disposición de agua pluvial',
+        description: 'Excavaciones a cielo abierto, movimiento de grandes volumenes de material, estabilización de arcilla, concretos lanzados, pisos de concreto, obra de toma, obra de desfogue y obra de control.',
+        images: ['icarsa4.png', 'icarsa5.png', 'icarsa6.png']
+    },
+    {
+        id: 2,
+        title: 'Vialidades y plataformas',
+        description: 'Cortes de terreno, estabilización de suelo, rellenos, terraplanes y plataformas, línea de alcantarillado, descargas domiciliarias, línea de agua potable, vialidad en nivel base, banquetas y guarniciones.',
+        images: ['icarsa7.png', 'icarsa8.png', 'icarsa9.png']
+    },
+    {
+        id: 3,
+        title: 'Construcción de edificio comercial y de servicios',
+        description: 'Construcción de edificio de 3 pisos con acabados de calidad y estructuras resistentes.',
+        images: ['icarsa10.png', 'icarsa11.png', 'icarsa12.png']
+    },
+    {
+        id: 4,
+        title: 'Red de agua potable',
+        description: 'Red de agua potable, alcantarillado, base y sub-base, guarniciones y banquetas.',
+        images: ['icarsa2.png', 'icarsa5.png', 'icarsa8.png']
+    },
+    {
+        id: 5,
+        title: 'Limpieza de colector sanitario',
+        description: 'Limpieza total de colectores sanitarios para garantizar un sistema sanitario seguro y eficiente.',
+        images: ['icarsa3.png', 'icarsa9.png', 'icarsa13.png']
+    }
+];
+
+// Service card navigation to detail page
+const serviceCards = document.querySelectorAll('.service-card[data-service-id]');
+serviceCards.forEach(card => {
+    const serviceId = card.dataset.serviceId;
+    card.style.cursor = 'pointer';
+    card.addEventListener('click', () => {
+        window.location.href = `service-detail.html?service=${serviceId}`;
+    });
+    card.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+            e.preventDefault();
+            window.location.href = `service-detail.html?service=${serviceId}`;
+        }
+    });
+});
+
+function initServiceDetailPage() {
+    const detailRoot = document.getElementById('serviceDetailContent');
+    if (!detailRoot) return;
+
+    const params = new URLSearchParams(window.location.search);
+    const serviceId = parseInt(params.get('service'), 10);
+    const service = serviceDetails.find(item => item.id === serviceId);
+
+    const titleElement = document.getElementById('detailTitle');
+    const descriptionElement = document.getElementById('detailDescription');
+    const imageElement = document.getElementById('carouselImage');
+    const thumbnailsContainer = document.getElementById('carouselThumbnails');
+    const prevButton = document.getElementById('carouselPrev');
+    const nextButton = document.getElementById('carouselNext');
+    const backLink = document.getElementById('backToServices');
+
+    if (!service || !titleElement || !descriptionElement || !imageElement || !thumbnailsContainer) {
+        detailRoot.innerHTML = `
+            <div class="service-detail-not-found">
+                <h2>Servicio no encontrado</h2>
+                <p>Lo sentimos, la información del servicio solicitado no está disponible.</p>
+                <a class="btn btn-secondary" href="index.html#servicios">Regresar a servicios</a>
+            </div>
+        `;
+        return;
+    }
+
+    titleElement.textContent = service.title;
+    descriptionElement.textContent = service.description;
+
+    let currentSlide = 0;
+
+    const renderCarousel = () => {
+        const imageSrc = service.images[currentSlide];
+        imageElement.src = imageSrc;
+        imageElement.alt = `${service.title} imagen ${currentSlide + 1}`;
+
+        thumbnailsContainer.innerHTML = '';
+        service.images.forEach((src, index) => {
+            const thumb = document.createElement('button');
+            thumb.type = 'button';
+            thumb.className = 'carousel-thumb';
+            if (index === currentSlide) thumb.classList.add('active');
+            thumb.innerHTML = `<img src="${src}" alt="${service.title} miniatura ${index + 1}" />`;
+            thumb.addEventListener('click', () => {
+                currentSlide = index;
+                renderCarousel();
+            });
+            thumbnailsContainer.appendChild(thumb);
+        });
+    };
+
+    if (prevButton) {
+        prevButton.addEventListener('click', () => {
+            currentSlide = (currentSlide - 1 + service.images.length) % service.images.length;
+            renderCarousel();
+        });
+    }
+
+    if (nextButton) {
+        nextButton.addEventListener('click', () => {
+            currentSlide = (currentSlide + 1) % service.images.length;
+            renderCarousel();
+        });
+    }
+
+    if (backLink) {
+        backLink.addEventListener('click', () => {
+            window.location.href = 'index.html#servicios';
+        });
+    }
+
+    renderCarousel();
+}
+
+initServiceDetailPage();
 
 // Diamond Image Rotation
 const heroDiamond = document.querySelector('.hero-diamond');
